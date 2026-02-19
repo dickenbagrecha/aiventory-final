@@ -1,0 +1,57 @@
+/* Nuclear Reset to kill blue glows */
+html,
+body,
+#root,
+.app-root,
+.app-main {
+    background-color: #1C1715 !important;
+    background: #1C1715 !important;
+    color: #F5EFE6 !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+body::before,
+body::after,
+.app-header::before,
+.app-header::after,
+#root::before,
+#root::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure header is brown */
+.app-header {
+    background: linear-gradient(135deg, #4B2E2B 0%, #6B3E2E 100%) !important;
+    box-shadow: 0 4px 20px rgba(75, 46, 43, 0.15) !important;
+    border-bottom: 1px solid #4B2E2B !important;
+}
+
+/* Ensure no blue text */
+* {
+    text-shadow: none !important;
+    -webkit-text-fill-color: initial !important;
+}
+
+/* Re-apply basic text colors that might have been nuked */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* color: #4B2E2B removed to allow overrides */
+}
+
+p,
+span,
+div {
+    color: inherit;
+}

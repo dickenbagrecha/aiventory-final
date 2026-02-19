@@ -1,0 +1,86 @@
+:root {
+  --logs-bg: #1C1715;
+  --logs-card-bg: #2A2422;
+  --logs-border: #4B2E2B;
+  --logs-text: #F5EFE6;
+  --logs-text-muted: #D6C5B4;
+  --logs-accent: #E8DCCB;
+}
+
+.logs-container {
+  padding: 2rem;
+  background-color: var(--logs-bg);
+  min-height: 100vh;
+}
+
+.logs-header {
+  margin-bottom: 2rem;
+}
+
+.logs-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2rem;
+  color: var(--logs-text);
+  margin-bottom: 0.5rem;
+}
+
+.logs-subtitle {
+  color: var(--logs-text-muted);
+}
+
+.logs-card {
+  background-color: var(--logs-card-bg);
+  border: 1px solid var(--logs-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logs-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: var(--logs-accent);
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: rgba(109, 122, 94, 0.2);
+  color: #a3b18a;
+  border: 1px solid #6D7A5E;
+}
+
+.status-pending {
+  background-color: rgba(193, 154, 107, 0.2);
+  color: #E8DCCB;
+  border: 1px solid #C19A6B;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.log-table th {
+  text-align: left;
+  padding: 1rem;
+  color: var(--logs-text-muted);
+  font-weight: 500;
+  border-bottom: 1px solid var(--logs-border);
+}
+
+.log-table td {
+  padding: 1rem;
+  color: var(--logs-text);
+  border-bottom: 1px solid rgba(75, 46, 43, 0.3);
+}
+
+.log-table tr:last-child td {
+  border-bottom: none;
+}
